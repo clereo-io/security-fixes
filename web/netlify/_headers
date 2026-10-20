@@ -1,0 +1,11 @@
+# Put this file in your site's publish directory (the folder that gets deployed).
+# Works on Netlify and on Cloudflare Pages.
+# Content-Security-Policy is report-only first: check the browser console, add the
+# hosts you need, then rename it to Content-Security-Policy to enforce.
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests
